@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adjektivhistorie</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h1>It's story time!</h1>
+      <img src="Img/pinkrabbit.jpeg" alt="En rosa kanin" />
+      <div id="storyDiv" class="storyDiv">
+        Det var en gang en
+        <div id="colorDiv" class="wordclass">____</div>
+        <div id="animalDiv" class="wordclass">____,</div>
+        som likte å
+        <div id="verb1Div" class="wordclass">____</div>
+        og
+        <div id="verb2Div" class="wordclass">____</div>.
+        Favorittmaten var
+        <div id="foodDiv" class="wordclass">____</div>.
+         Historie slutt.
+      </div>
+      <br />
+      <div id="buttons" class="buttons">
+        <div id="colors">
+          <button onclick="setColor(this)">Blå</button>
+          <button onclick="setColor(this)">Grønn</button>
+          <button onclick="setColor(this)">Rosa</button>
+        </div>
+        <div id="animals">
+          <button onclick="setAnimal(this)">Hund</button>
+          <button onclick="setAnimal(this)">Katt</button>
+          <button onclick="setAnimal(this)">Kanin</button>
+        </div>
+        <div id="verbs">
+          <button onclick="setVerb1(this)">Lese</button>
+          <button onclick="setVerb1(this)">Bake</button>
+          <button onclick="setVerb1(this)">Trene</button>
+        </div>
+        <div id="verbs">
+          <button onclick="setVerb2(this)">Danse</button>
+          <button onclick="setVerb2(this)">Seile</button>
+          <button onclick="setVerb2(this)">Game</button>
+        </div>
+        <div id="food">
+          <button onclick="setFood(this)">Kjøttboller</button>
+          <button onclick="setFood(this)">Fiskekaker</button>
+          <button onclick="setFood(this)">Taco</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="javascript.js"></script>
+  </body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adjektivhistorie</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      img {
+        width: 150px;
+        height: 200px;
+      }
+
+      .storyDiv {
+        border: 2px dashed green;
+        width: fit-content;
+        padding: 10px;
+      }
+
+      .wordclass {
+        display: inline-block;
+      }
+
+      .buttons {
+        border-radius: 5px;
+        border: none;
+        background-color: whitesmoke;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script>
+            // Model
+            let color = "____";
+            let animal = "____";
+            let verb1 = "____";
+            let verb2 = "____";
+            let food = "____";
+
+            // View
+            updateView();
+            function updateView() {
+              document.getElementById('app').innerHTML = /*HTML*/`
+
+              <h1>It's story time!</h1>
+              <img src="Img/pinkrabbit.jpeg" alt="En rosa kanin" />
+              <div id="storyDiv" class="storyDiv">
+              Det var en gang en
+              <div id="colorDiv" class="wordclass">${color}</div>
+              <div id="animalDiv" class="wordclass">${animal},</div>
+              som likte å
+              <div id="verb1Div" class="wordclass">${verb1}</div>
+              og
+              <div id="verb2Div" class="wordclass">${verb2}</div>.
+              Favorittmaten var
+              <div id="foodDiv" class="wordclass">${food}</div>.
+               Historie slutt.
+            </div>
+            <br />
+            <div>
+              <div id="colors">
+                <button class="buttons" onclick="setColor(this)">Blå</button>
+                <button class="buttons" onclick="setColor(this)">Grønn</button>
+                <button class="buttons" onclick="setColor(this)">Rosa</button>
+              </div>
+              <div id="animals">
+                <button class="buttons" onclick="setAnimal(this)">Hund</button>
+                <button class="buttons" onclick="setAnimal(this)">Katt</button>
+                <button class="buttons" onclick="setAnimal(this)">Kanin</button>
+              </div>
+              <div id="verbs">
+                <button class="buttons" onclick="setVerb1(this)">Lese</button>
+                <button class="buttons" onclick="setVerb1(this)">Bake</button>
+                <button class="buttons" onclick="setVerb1(this)">Trene</button>
+              </div>
+              <div id="verbs">
+                <button class="buttons" onclick="setVerb2(this)">Danse</button>
+                <button class="buttons" onclick="setVerb2(this)">Seile</button>
+                <button class="buttons" onclick="setVerb2(this)">Game</button>
+              </div>
+              <div id="food">
+                <button class="buttons" onclick="setFood(this)">Kjøttboller</button>
+                <button class="buttons" onclick="setFood(this)">Fiskekaker</button>
+                <button class="buttons" onclick="setFood(this)">Taco</button>
+                <br>
+                <br>
+              </div>
+              <button class="buttons" onclick="blankAll(this)">Start på nytt</button>
+            </div>
+          </div>
+          `
+            }
+
+          // Controller
+          function setColor(btn) {
+            color = btn.innerHTML;
+            updateView();
+          }
+
+          function setAnimal(btn) {
+            animal = btn.innerHTML;
+            updateView();
+      }
+
+          function setVerb1(btn) {
+            verb1 = btn.innerHTML;
+            updateView();
+      }
+
+          function setVerb2(btn) {
+            verb2 = btn.innerHTML;
+            updateView();
+      }
+
+          function setFood(btn) {
+            food = btn.innerHTML;
+            updateView();
+      }
+
+        function blankAll(btn){
+            location.reload();
+        }
+
+        updateView();
+    </script>
+  </body>
+</html>
